@@ -1,8 +1,8 @@
 all:
-    @echo "Build process initiated."
+	@echo "Build process initiated."
 
 check:
-    @echo "Run tests."
+	@echo "Run tests."
 
 distcheck:
-    @echo "Validate distribution."
+	@echo "Validate distribution."
