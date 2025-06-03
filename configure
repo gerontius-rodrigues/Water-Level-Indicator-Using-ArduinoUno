@@ -1,0 +1,3 @@
+#!/bin/bash
+# No configuration needed for Arduino Uno code.
+exit 0 
