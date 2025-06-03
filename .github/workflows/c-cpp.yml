@@ -11,13 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - name: Verify Makefile
-        run: |
-          if [ ! -f Makefile ]; then
-            echo "Makefile not found. Please add a Makefile.";
-            exit 1;
-          fi
       - name: make
         run: make
       - name: make check
