@@ -12,10 +12,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Set executable permission for configure
-        run: chmod +x ./configure
-      - name: configure
-        run: ./configure
+      - name: Verify Makefile
+        run: |
+          if [ ! -f Makefile ]; then
+            echo "Makefile not found. Please add a Makefile.";
+            exit 1;
+          fi
       - name: make
         run: make
       - name: make check
