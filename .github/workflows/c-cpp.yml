@@ -13,17 +13,12 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-      - name: Navigate to workflow directory
-        run: cd .github/workflows
       - name: make
-        run: |
-          cd .github/workflows
-          make
+        run: make
+        working-directory: .github/workflows
       - name: make check
-        run: |
-          cd .github/workflows
-          make check
+        run: make check
+        working-directory: .github/workflows
       - name: make distcheck
-        run: |
-          cd .github/workflows
-          make distcheck
+        run: make distcheck
+        working-directory: .github/workflows
